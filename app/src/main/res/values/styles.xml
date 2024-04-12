@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="rounde_corner">
+        <item name="cornerSize">45dp</item>
+    </style>
+    <style name="rounde_corner_avatar">
+        <item name="cornerSize">60dp</item>
+    </style>
+</resources>
