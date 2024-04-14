@@ -3,12 +3,19 @@ package com.ph36461.duanmau.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ph36461.duanmau.Apdapter.Top10Adapter;
+import com.ph36461.duanmau.DAO.ThongKeDAO;
+import com.ph36461.duanmau.Model.Top;
 import com.ph36461.duanmau.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +64,30 @@ public class Top10Fragment extends Fragment {
         }
     }
 
+    Top10Adapter top10Adapter;
+    RecyclerView rcv_top10;
+    ThongKeDAO thongKeDAO;
+    ArrayList<Top> lstTOp;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top10, container, false);
+        View view = inflater.inflate(R.layout.fragment_top10, container, false);
+
+        thongKeDAO = new ThongKeDAO(getContext());
+        initUI(view);
+        fillRCV();
+        return view;
+    }
+
+    private void fillRCV() {
+        lstTOp = (ArrayList<Top>) thongKeDAO.getTop();
+        top10Adapter = new Top10Adapter(getContext(),lstTOp);
+        rcv_top10.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        rcv_top10.setAdapter(top10Adapter);
+    }
+
+    private void initUI(View view) {
+        rcv_top10 = view.findViewById(R.id.rcv_top10);
     }
 }
