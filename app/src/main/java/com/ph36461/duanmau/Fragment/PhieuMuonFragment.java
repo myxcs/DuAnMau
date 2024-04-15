@@ -1,5 +1,7 @@
 package com.ph36461.duanmau.Fragment;
 
+import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -110,7 +112,7 @@ public class PhieuMuonFragment extends Fragment {
     ThanhVienSpinnerAdapter thanhVienSpinnerAdapter;
     RecyclerView rcv_phieumuon;
     FloatingActionButton btn_add;
-    EditText edt_maPM,edt_ngay,edt_tienThue;
+    TextView edt_maPM,edt_ngay,edt_tienThue;
     Spinner spinner_thanhvien,spinner_sach;
     int maTV = 0,maSach = 0,getPosition = 0,tienThue;
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -169,6 +171,8 @@ public class PhieuMuonFragment extends Fragment {
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_phieumuon);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.setCancelable(false);
 
         Window window = dialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
@@ -263,6 +267,7 @@ public class PhieuMuonFragment extends Fragment {
             }
         });
         btn_save.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
             @Override
             public void onClick(View v) {
 //                phieuMuon = new PhieuMuon();
@@ -298,6 +303,7 @@ public class PhieuMuonFragment extends Fragment {
                 fillRCV();
             }
         });
+
         dialog.show();
     }
     private void initUI(View view) {

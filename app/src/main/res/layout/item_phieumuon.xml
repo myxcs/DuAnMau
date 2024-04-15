@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp">
+    android:padding="10dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shadow"
-        android:padding="12dp">
+        android:padding="20dp">
         <LinearLayout
             android:id="@+id/w_content"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
             <TextView
-                android:textStyle="bold"
+
                 android:id="@+id/tv_giathue"
                 android:layout_marginTop="6dp"
                 android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
             <TextView
-                android:textStyle="bold"
+
                 android:id="@+id/tv_namxuatban"
                 android:layout_marginTop="6dp"
                 android:layout_width="wrap_content"

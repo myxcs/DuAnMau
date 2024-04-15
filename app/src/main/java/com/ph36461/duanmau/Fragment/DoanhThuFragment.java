@@ -147,7 +147,7 @@ public class DoanhThuFragment extends Fragment {
                         if (thongKeDAO.getDoanhThu(tungay,denngay) == 0) {
                             Toast.makeText(getContext(), "Không có quyển Sách nào được mượn trong thời gian này !", Toast.LENGTH_SHORT).show();
                         } else {
-                            tv_doanhthu.setText("Doanh thu: " + thongKeDAO.getDoanhThu(tungay,denngay) + " đ");
+                            tv_doanhthu.setText(thongKeDAO.getDoanhThu(tungay,denngay) + " đ");
                         }
                     } else {
                         Toast.makeText(getContext(), "Thời gian không hợp lệ !", Toast.LENGTH_SHORT).show();

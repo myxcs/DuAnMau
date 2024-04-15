@@ -69,32 +69,32 @@ public class DbHelper extends SQLiteOpenHelper {
 
         String add_tt = "INSERT INTO ThuThu VALUES" +
                 "('admin','Administrator','admin')," +
-                "('ttnva','Nguyễn Văn A','12345')," +
-                "('ttnvb','Nguyễn Văn B','12345')";
+                "('thai','Quang Thái','thai1234')," +
+                "('hello','Hello 1','1234')";
         db.execSQL(add_tt);
 
         String add_loaiSach = "INSERT INTO LoaiSach VALUES" +
                 "(0,'CNTT')," +
-                "(1,'Ngoại ngữ')," +
-                "(2,'Sức khỏe')," +
-                "(3,'Kinh tế')," +
-                "(4,'Khoa học')";
+                "(1,'Tiếng Anh')," +
+                "(2,'Thể Chất')," +
+                "(3,'Chính Trị')," +
+                "(4,'Kinh Tế')";
         db.execSQL(add_loaiSach);
 
         String add_sach = "INSERT INTO Sach VALUES" +
                 "(0,'Lập trình Javascrip Cơ bản',5000,0,2000)," +
                 "(1,'Lập trình Javascrip Nâng cao',7000,0,2004)," +
-                "(2,'Công nghệ tương lai',10000,0,2006)," +
-                "(3,'Tri thức về vạn vật',5000,4,1989)," +
+                "(2,'Lập trình Android',10000,0,2006)," +
+                "(3,'Lập trình ReactJS',6000,4,1989)," +
                 "(4,'Lịch sử khoa học',5000,4,1999)";
         db.execSQL(add_sach);
 
         String add_thanhvien = "INSERT INTO ThanhVien VALUES" +
-                "(0,'Nguyễn Văn A',2000, '0123',09123456)," +
-                "(1,'Nguyễn Văn B',2001, '2345',09123455)," +
-                "(2,'Nguyễn Văn C',2002, '3456',0987777)," +
-                "(3,'Nguyễn Văn D',2003, '4567',09838383)," +
-                "(4,'Nguyễn Văn E',2004, '5678',097646444)";
+                "(0,'Nguyễn Quang Thái',2000, '0123',09123445)," +
+                "(1,'Trần Văn B',2001, '2345',09876534)," +
+                "(2,'Phan Xuân Bắc',2002, '3456',09325354)," +
+                "(3,'Nguyễn Xuân Hùng',2003, '4567',09454634)," +
+                "(4,'La Quán Trung',2004, '5678',09454354)";
         db.execSQL(add_thanhvien);
     }
 
