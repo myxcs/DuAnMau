@@ -41,7 +41,7 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.View
         holder.tv_hoten.setText("Tên TV: " + thanhVien.getHoTen());
         holder.tv_namsinh.setText("Năm Sinh: " + String.valueOf(thanhVien.getNamSinh()));
         holder.tvCccd.setText("CCCD: " + thanhVien.getCccd());
-        holder.tvcancuoccd.setText("Căn Cước Công Dân: " +thanhVien.getCancuoccc());
+        holder.tvcancuoccd.setText("SĐT: " +thanhVien.getCancuoccc());
 
         holder.btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
