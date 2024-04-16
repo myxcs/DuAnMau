@@ -52,6 +52,7 @@ import com.ph36461.duanmau.Model.ThanhVien;
 import com.ph36461.duanmau.R;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
@@ -112,7 +113,8 @@ public class PhieuMuonFragment extends Fragment {
     ThanhVienSpinnerAdapter thanhVienSpinnerAdapter;
     RecyclerView rcv_phieumuon;
     FloatingActionButton btn_add;
-    TextView edt_maPM,edt_ngay,edt_tienThue;
+    TextView edt_maPM,edt_ngay,edt_tienThue,edt_gio;
+
     Spinner spinner_thanhvien,spinner_sach;
     int maTV = 0,maSach = 0,getPosition = 0,tienThue;
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -179,7 +181,9 @@ public class PhieuMuonFragment extends Fragment {
 
         TextView tv_title = dialog.findViewById(R.id.tv_title);
         edt_maPM = dialog.findViewById(R.id.edt_maPM);
+
         edt_ngay = dialog.findViewById(R.id.edt_ngay);
+        edt_gio = dialog.findViewById(R.id.edt_gio);
         edt_tienThue = dialog.findViewById(R.id.edt_tienThue);
         spinner_sach = dialog.findViewById(R.id.spinner_sach);
         spinner_thanhvien = dialog.findViewById(R.id.spinner_thanhvien);
@@ -245,6 +249,7 @@ public class PhieuMuonFragment extends Fragment {
             spinner_sach.setSelection(maSach);
 
             edt_ngay.setText(phieuMuon.getNgay());
+            edt_gio.setText(phieuMuon.getGio());
             edt_tienThue.setText(String.valueOf(phieuMuon.getTienThue()));
 
             if (phieuMuon.getTraSach() == 1) {
@@ -274,6 +279,7 @@ public class PhieuMuonFragment extends Fragment {
                 phieuMuon.setMaSach(maSach);
                 phieuMuon.setMaTV(maTV);
                 phieuMuon.setNgay(String.valueOf(LocalDate.now()));
+                phieuMuon.setGio(String.valueOf(LocalTime.now()));
 
                 SharedPreferences preferences = getActivity().getSharedPreferences("USER", Context.MODE_PRIVATE);
                 String user = preferences.getString("username","");

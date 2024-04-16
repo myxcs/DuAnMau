@@ -41,7 +41,8 @@ public class DbHelper extends SQLiteOpenHelper {
                         "maSach INTEGER NOT NULL, " +
                         "ngay DATE NOT NULL, " +
                         "tienThue INTEGER NOT NULL, " +
-                        "traSach INTEGER NOT NULL)";
+                        "traSach INTEGER NOT NULL," +
+                        "gio DATE NOT NULL)";
         db.execSQL(createTablePhieuMuon);
 
         //Tao bang Sach
@@ -62,7 +63,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(createTableLoaiSach);
 
         String add_pm = "INSERT INTO PhieuMuon VALUES" +
-                " (1,'admin',0,0,'23-9-2023',5000,0)";
+                " (1,'admin',0,0,'23-9-2023',60000,0,'00:00:00')";
 
         db.execSQL(add_pm);
 

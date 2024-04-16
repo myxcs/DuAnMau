@@ -25,6 +25,7 @@ public class PhieuMuonDAO {
         contentValues.put("ngay",obj.getNgay());
         contentValues.put("tienThue",obj.getTienThue());
         contentValues.put("traSach",obj.getTraSach());
+        contentValues.put("gio",obj.getGio());
 
         return db.insert("PhieuMuon",null,contentValues);
     }
@@ -37,6 +38,7 @@ public class PhieuMuonDAO {
         contentValues.put("ngay",obj.getNgay());
         contentValues.put("tienThue",obj.getTienThue());
         contentValues.put("traSach",obj.getTraSach());
+        //contentValues.put("gio",obj.getGio());
 
         return db.update("PhieuMuon",contentValues,"maPM = ?",new String[]{String.valueOf(obj.getMaPM())});
     }
@@ -56,7 +58,8 @@ public class PhieuMuonDAO {
                     Integer.parseInt(cursor.getString(3)),
                     cursor.getString(4),
                     Integer.parseInt(cursor.getString(5)),
-                    Integer.parseInt(cursor.getString(6))
+                    Integer.parseInt(cursor.getString(6)),
+                    cursor.getString(7)
             ));
         }
         return lstPM;

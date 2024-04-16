@@ -73,6 +73,7 @@ public class PhieuMuonAdapter extends RecyclerView.Adapter<PhieuMuonAdapter.View
 
         }
         holder.tv_ngay.setText("Ngày thuê: " + phieuMuon.getNgay());
+        holder.tv_gio.setText("Giờ thuê: " + phieuMuon.getGio());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +97,7 @@ public class PhieuMuonAdapter extends RecyclerView.Adapter<PhieuMuonAdapter.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_maphieumuon,tv_thanhvien,tv_tensach,tv_giathue,tv_trangthai,tv_ngay,tv_namxuatban;
+        TextView tv_maphieumuon,tv_thanhvien,tv_tensach,tv_giathue,tv_trangthai,tv_ngay,tv_namxuatban, tv_gio;
         ImageButton btn_delete;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -109,6 +110,7 @@ public class PhieuMuonAdapter extends RecyclerView.Adapter<PhieuMuonAdapter.View
             tv_ngay = itemView.findViewById(R.id.tv_ngay);
             tv_namxuatban = itemView.findViewById(R.id.tv_namxuatban);
             btn_delete = itemView.findViewById(R.id.btn_delete);
+            tv_gio = itemView.findViewById(R.id.tv_gio);
         }
     }
 }
