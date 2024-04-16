@@ -66,7 +66,6 @@ public class LoaiSachAdapter extends RecyclerView.Adapter<LoaiSachAdapter.ViewHo
             super(itemView);
             tv_maloai = itemView.findViewById(R.id.tv_maloai);
             tv_tenloai = itemView.findViewById(R.id.tv_tenloai);
-
             btn_xoa = itemView.findViewById(R.id.btn_delete);
         }
     }

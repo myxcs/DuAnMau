@@ -53,10 +53,13 @@ public class PhieuMuonAdapter extends RecyclerView.Adapter<PhieuMuonAdapter.View
         holder.tv_namxuatban.setText("Năm xuất bản: "+String.valueOf(sach.getNamXuatBan()));
         holder.tv_maphieumuon.setText("Mã PM: " + String.valueOf(phieuMuon.getMaPM()));
         holder.tv_thanhvien.setText("Thành viên: " + thanhVien.getHoTen());
+
         if(sach.getGiaThue() > 50000) {
+            holder.tv_tensach.setText("Tên sách: " + sach.getTenSach());
             holder.tv_tensach.setTextColor(context.getResources().getColor(R.color.red_A400));
         } else
         {
+            holder.tv_tensach.setText("Tên sách: " + sach.getTenSach());
             holder.tv_tensach.setTextColor(context.getResources().getColor(R.color.blue_A400));
         }
 

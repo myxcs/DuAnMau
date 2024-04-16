@@ -82,11 +82,11 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(add_loaiSach);
 
         String add_sach = "INSERT INTO Sach VALUES" +
-                "(0,'Lập trình Javascrip Cơ bản',5000,0,2000)," +
-                "(1,'Lập trình Javascrip Nâng cao',7000,0,2004)," +
-                "(2,'Lập trình Android',10000,0,2006)," +
-                "(3,'Lập trình ReactJS',6000,4,1989)," +
-                "(4,'Lịch sử khoa học',5000,4,1999)";
+                "(0,'Lập trình Javascrip Cơ bản',60000,0,2000)," +
+                "(1,'Lập trình Javascrip Nâng cao',70000,0,2004)," +
+                "(2,'Lập trình Android',40000,0,2006)," +
+                "(3,'Lập trình ReactJS',60000,4,1989)," +
+                "(4,'Lịch sử khoa học',30000,4,1999)";
         db.execSQL(add_sach);
 
         String add_thanhvien = "INSERT INTO ThanhVien VALUES" +
